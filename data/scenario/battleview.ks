@@ -10,24 +10,32 @@
 攻撃します[l][cm]
 [loadjs storage="Mikatapower.js"]
 [wait time="1500"]
-敵が強力な攻撃の準備をしている！！[l][cm]
+敵が強力な攻撃の準備をしている！！
+[wait time="1000"]
+[cm]
 [glink color="white" target="*select1" text="攻撃" size=20 x=100 y=100 ]
 [glink color="blue" target="*select2" text="防御" size=20 x=100 y=140 ]
-[s]
+[wait time="2500"]
+[cm]
+@jump target=*select1
 *c1
-[wait time="1500"]
-敵が弱ってる！！[l][cm]
+敵が弱ってる！！
+[wait time="1000"]
+[cm]
 [glink color="white" target="*select3" text="攻撃" size=20 x=100 y=100 ]
 [glink color="blue" target="*select4" text="防御" size=20 x=100 y=140 ]
-[wait time="1500"]
-[s]
+[wait time="2500"]
+[cm]
+@jump target=*select4
 *c2
-[wait time="1500"]
-敵が何かの準備をしているようだ[l][cm]
+敵が何かの準備をしているようだ
+[wait time="1000"]
+[cm]
 [glink color="white" target="*select5" text="攻撃" size=20 x=100 y=100 ]
 [glink color="blue" target="*select6" text="防御" size=20 x=100 y=140 ]
-[wait time="1500"]
-[s]
+[wait time="2500"]
+[cm]
+@jump target=*select5
 *c3
 [if exp='MP >= 0']
     撃退しました[l][cm]

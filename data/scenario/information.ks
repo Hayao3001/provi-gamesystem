@@ -1,6 +1,5 @@
 *start
-[ct]
-[position layer=message1 width=1000 height=600 top=100 left=200 ]
+[position layer=message1 width=1000 height=500 top=100 left=200 ]
 [current layer="message1"]
 [layopt layer=message1 visible=true]
 [glink color="white" target="*teki" text="敵情報" size=20 x=1100 y=80]
@@ -14,6 +13,31 @@
 [glink color="white" target="*information" text="戻る" size=20 x=1100 y=80]
 [s]
 *teki
+[freeimage layer="1"]
+[loadjs storage="nowplace.js"]
+[layopt layer=message1 visible=false]
+[image layer="1" x="300" y="350" storage="ship.png"]
+[clickable target="*tekidata1" x=300 y=250 width=100 height=100 mouseopacity="128" border="5px:dotted:black"]
+[if exp="NowPlace == 1"]
+    [image layer="1" x="350" y="400" storage="上.png"]
+[endif]
+[image layer="1" x="300" y="120" storage="ship.png"]
+[clickable target="*tekidata2" x=300 y=120 width=100 height=100 mouseopacity="128" border="5px:dotted:black"]
+[if exp="NowPlace == 2"]
+    [image layer="1" x="350" y="170" storage="上.png"]
+[endif]
+[image layer="1" x="750" y="150" storage="ship.png"]
+[clickable target="*tekidata3" x=750 y=150 width=100 height=100 mouseopacity="128" border="5px:dotted:black"]
+[if exp="NowPlace == 3"]
+    [image layer="1" x="800" y="200" storage="上.png"]
+[endif]
+[glink color="white" target="*information" text="戻る" size=20 x=1100 y=80]
+[s]
+
+*tekidata1
+[position layer=message1 width=1000 height=500 top=100 left=200 ]
+[current layer="message1"]
+[layopt layer=message1 visible=true]
 [if exp='Ship1 == 0']  
     艦隊1:1000[r]
 [endif]
@@ -23,6 +47,13 @@
 [if exp='Ship3 == 0']
     艦隊3:3000[r]
 [endif]
+[glink color="white" target="*teki" text="戻る" size=20 x=1100 y=80]
+[s]
+
+*tekidata2
+[position layer=message1 width=1000 height=500 top=100 left=200 ]
+[current layer="message1"]
+[layopt layer=message1 visible=true]
 [if exp='Ship4 == 0']  
     艦隊4:2500[r]
 [endif]
@@ -32,6 +63,13 @@
 [if exp='Ship6 == 0']
     艦隊6:700[r]
 [endif]
+[glink color="white" target="*teki" text="戻る" size=20 x=1100 y=80]
+[s]
+
+*tekidata3
+[position layer=message1 width=1000 height=500 top=100 left=200 ]
+[current layer="message1"]
+[layopt layer=message1 visible=true]
 [if exp='Ship7 == 0']  
     艦隊7:2100[r]
 [endif]
@@ -44,10 +82,9 @@
 [if exp='Ship10 == 0']
     艦隊10:3000[r]
 [endif]
-
-
-[glink color="white" target="*information" text="戻る" size=20 x=1100 y=80]
+[glink color="white" target="*teki" text="戻る" size=20 x=1100 y=80]
 [s]
+
 *information
 [current layer="message0"]
 [layopt layer=message1 visible=false]
